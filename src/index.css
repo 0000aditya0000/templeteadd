@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #050a1e;
+  --color-navy-deep: #020817;
+  --color-navy-card: #0a1435;
+  --color-navy-card-alt: #0b1638;
+  --color-gold: #c9a14a;
+  --color-gold-bright: #d4af5a;
+  --color-wa: #25d366;
+  --color-muted: #9aa3b8;
+  --color-muted-light: #c4c9d6;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-navy);
+  color: #fff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.wa-glow {
+  box-shadow: 0 0 18px rgba(37, 211, 102, 0.45), 0 0 40px rgba(37, 211, 102, 0.2);
+}
+
+.wa-glow:hover {
+  box-shadow: 0 0 22px rgba(37, 211, 102, 0.55), 0 0 48px rgba(37, 211, 102, 0.28);
+}
+
+.text-stroke-gold {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-gold);
+  text-stroke: 1.5px var(--color-gold);
+}
+
+.marble-bg {
+  background-color: #0a1628;
+  background-image:
+    radial-gradient(ellipse at 30% 20%, rgba(80, 110, 160, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(40, 70, 120, 0.4) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 50%, rgba(20, 40, 80, 0.5) 0%, transparent 70%),
+    linear-gradient(135deg, #0d1a32 0%, #152848 35%, #0a1528 70%, #1a2d4a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.marble-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.04) 45%, transparent 50%),
+    linear-gradient(160deg, transparent 30%, rgba(180, 200, 230, 0.06) 55%, transparent 70%),
+    linear-gradient(40deg, transparent 20%, rgba(255, 255, 255, 0.03) 60%, transparent 80%);
+  pointer-events: none;
+}
+
+.gradient-gold {
+  background: linear-gradient(180deg, #ffe566 0%, #ffb020 45%, #e87800 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-trusted {
+  background: linear-gradient(180deg, #ffffff 0%, #ffb84d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
