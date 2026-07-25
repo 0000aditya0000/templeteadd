@@ -4,18 +4,7 @@ export default function PromoHero() {
   return (
     <section id="top" className="hero-wash relative px-6 pb-16 pt-12 lg:pt-16">
       <div className="mx-auto flex max-w-6xl flex-col items-center text-center">
-        <p className="fade-up mb-3 text-[11px] font-semibold tracking-[0.24em] text-olive uppercase">
-          Member mornings
-        </p>
-        <h1 className="fade-up font-serif text-[clamp(2.6rem,6vw,4.2rem)] leading-[1.05] font-semibold tracking-tight text-ink">
-          Hel<span className="text-olive italic">ia</span>
-        </h1>
-        <p className="fade-up mt-4 max-w-md text-[15px] leading-relaxed text-muted">
-          Message us for your table ID, today&apos;s roast, or a seat by the
-          window — we reply while the kettle sings.
-        </p>
-
-        <div className="float-soft relative mt-10 w-full max-w-[400px]">
+        <div className="float-soft relative w-full max-w-[400px]">
           <div className="promo-panel rounded-[28px] px-8 py-14 text-center shadow-[0_30px_60px_rgba(31,42,28,0.22)] sm:px-10 sm:py-16">
             <p className="relative z-10 text-[2rem] font-extrabold italic tracking-wide text-[#e8c9a0] sm:text-[2.4rem]">
               15%
