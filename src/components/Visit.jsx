@@ -44,7 +44,7 @@ export default function Visit() {
             </div>
 
             <div className="mt-6">
-              <WhatsAppButton size="lg" label="Get my ID" />
+              <WhatsAppButton size="lg" />
             </div>
           </div>
 

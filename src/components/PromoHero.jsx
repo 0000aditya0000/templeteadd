@@ -17,14 +17,14 @@ export default function PromoHero() {
 
         <div className="float-soft relative mt-10 w-full max-w-[400px]">
           <div className="promo-panel rounded-[28px] px-8 py-14 text-center shadow-[0_30px_60px_rgba(31,42,28,0.22)] sm:px-10 sm:py-16">
-            <p className="relative z-10 text-2xl font-bold text-[#e8c9a0] italic sm:text-3xl">
-              Ask for
+            <p className="relative z-10 text-[2rem] font-extrabold italic tracking-wide text-[#e8c9a0] sm:text-[2.4rem]">
+              15%
             </p>
-            <p className="relative z-10 mt-1 font-serif text-[clamp(2.4rem,7vw,3.4rem)] leading-none font-semibold text-[#f4f7f1]">
-              Your ID
+            <p className="relative z-10 mt-1 font-serif text-[clamp(2.2rem,6vw,3.2rem)] leading-none font-semibold text-[#f4f7f1]">
+              BEST SERVICE
             </p>
             <p className="relative z-10 mt-3 text-sm tracking-[0.18em] text-[#c5d4b8] uppercase">
-              WhatsApp · Instant seat
+              Trusted platform
             </p>
 
             <div className="relative z-10 mt-10">
@@ -35,7 +35,7 @@ export default function PromoHero() {
                 className="wa-glow inline-flex items-center gap-2 rounded-full bg-wa px-5 py-2.5 text-sm font-semibold text-white"
               >
                 <WhatsAppIcon className="h-4 w-4" />
-                WhatsApp Now
+                Chat on WhatsApp
               </a>
               <span
                 className="pointer-events-none absolute -right-3 bottom-[-8px] drop-shadow"
@@ -50,7 +50,7 @@ export default function PromoHero() {
         </div>
 
         <div className="mt-10">
-          <WhatsAppButton size="lg" label="Get my ID on WhatsApp" />
+          <WhatsAppButton size="lg" />
         </div>
       </div>
     </section>

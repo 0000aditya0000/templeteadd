@@ -52,7 +52,7 @@ export default function Craft() {
           <p className="max-w-md font-serif text-xl leading-snug text-ink sm:text-2xl">
             Need your usual waiting when you walk in? Send your ID.
           </p>
-          <WhatsAppButton size="lg" className="shrink-0" label="Message us" />
+          <WhatsAppButton size="lg" className="shrink-0" />
         </div>
       </div>
     </section>

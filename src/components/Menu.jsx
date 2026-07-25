@@ -62,7 +62,7 @@ export default function Menu() {
                 {item.desc}
               </p>
               <div className="mt-5">
-                <WhatsAppButton size="sm" label="Order on WhatsApp" />
+                <WhatsAppButton size="sm" />
               </div>
             </article>
           ))}
