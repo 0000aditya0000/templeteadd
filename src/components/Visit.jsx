@@ -2,9 +2,9 @@ import Logo from "./Logo";
 import WhatsAppButton from "./WhatsAppButton";
 
 const INFO = [
-  { label: "Where", value: "42 Lamplight Lane, Off Church Street" },
-  { label: "Hours", value: "Tue–Sun, 7:00 am – 9:30 pm · Mondays we rest" },
-  { label: "Order ahead", value: "Message us and skip the wait entirely" },
+  { label: "Where", value: "18 Maple Walk, Near River Market" },
+  { label: "Hours", value: "Wed–Mon, 6:30 am – 8:00 pm · Tuesdays closed" },
+  { label: "Table ID", value: "WhatsApp us — we’ll hold your spot" },
 ];
 
 const FOOTER_LINKS = [
@@ -18,25 +18,25 @@ export default function Visit() {
   return (
     <>
       <section id="visit" className="px-6 py-20 lg:px-10 lg:py-28">
-        <div className="mx-auto grid max-w-6xl items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+        <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div>
-            <p className="mb-3 text-[11px] font-semibold tracking-[0.22em] text-gold uppercase">
-              Find us
+            <p className="mb-3 text-[11px] font-semibold tracking-[0.22em] text-olive uppercase">
+              Visit
             </p>
-            <h2 className="font-serif text-[clamp(2.2rem,4.5vw,3.4rem)] leading-tight font-medium text-white">
-              Come sit for a while
+            <h2 className="font-serif text-[clamp(2.1rem,4.5vw,3.2rem)] leading-tight font-medium text-ink">
+              Drop by — or message first
             </h2>
 
             <div className="mt-10">
               {INFO.map((row) => (
                 <div
                   key={row.label}
-                  className="flex flex-col gap-1 border-t border-white/10 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
+                  className="flex flex-col gap-1 border-t border-line py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
                 >
-                  <span className="shrink-0 text-[11px] font-semibold tracking-[0.18em] text-gold uppercase">
+                  <span className="shrink-0 text-[11px] font-semibold tracking-[0.18em] text-olive uppercase">
                     {row.label}
                   </span>
-                  <span className="text-[14px] text-white sm:text-right sm:text-[15px]">
+                  <span className="text-[14px] text-ink-soft sm:text-right sm:text-[15px]">
                     {row.value}
                   </span>
                 </div>
@@ -44,15 +44,15 @@ export default function Visit() {
             </div>
 
             <div className="mt-6">
-              <WhatsAppButton size="lg" />
+              <WhatsAppButton size="lg" label="Get my ID" />
             </div>
           </div>
 
-          <div className="flex min-h-[320px] flex-col items-center justify-center rounded-3xl border border-white/8 bg-navy-card px-8 py-12 text-center sm:min-h-[380px]">
-            <Logo />
-            <p className="mt-8 max-w-xs font-serif text-lg leading-relaxed text-white sm:text-xl">
-              Reserve a table, ask for today&apos;s single-origin, or plan a
-              private evening — one message does it all.
+          <div className="flex min-h-[300px] flex-col items-center justify-center bg-olive-deep px-8 py-12 text-center sm:min-h-[360px]">
+            <Logo tone="light" />
+            <p className="mt-8 max-w-xs font-serif text-lg leading-relaxed text-[#e8eee3] sm:text-xl">
+              Reserve a corner, ask for today&apos;s pour-over, or request your
+              table ID — one message covers it.
             </p>
             <div className="mt-8">
               <WhatsAppButton size="lg" />
@@ -61,12 +61,12 @@ export default function Visit() {
         </div>
       </section>
 
-      <footer className="border-t border-white/10 px-6 py-8 lg:px-10">
+      <footer className="border-t border-line px-6 py-8 lg:px-10">
         <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <Logo />
             <p className="mt-2 max-w-xs text-sm text-muted">
-              Slow-roasted coffee &amp; warm company, since sunrise.
+              Morning coffee, fresh bread, and a seat with your name on it.
             </p>
           </div>
 
@@ -75,7 +75,7 @@ export default function Visit() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-[13px] text-white/80 transition-colors hover:text-white"
+                className="text-[13px] text-ink-soft transition-colors hover:text-olive-deep"
               >
                 {link.label}
               </a>

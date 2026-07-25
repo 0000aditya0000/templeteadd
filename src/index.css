@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #050a1e;
-  --color-navy-deep: #020817;
-  --color-navy-card: #0a1435;
-  --color-navy-card-alt: #0b1638;
-  --color-gold: #c9a14a;
-  --color-gold-bright: #d4af5a;
-  --color-wa: #25d366;
-  --color-muted: #9aa3b8;
-  --color-muted-light: #c4c9d6;
-  --font-serif: "Playfair Display", Georgia, serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --color-canvas: #eef2ea;
+  --color-surface: #f7f9f4;
+  --color-ink: #1f2a1c;
+  --color-ink-soft: #3d4a38;
+  --color-olive: #5a6f4a;
+  --color-olive-deep: #3e5234;
+  --color-leaf: #7a945f;
+  --color-muted: #6b7864;
+  --color-line: #d5ddd0;
+  --color-wa: #1fad57;
+  --color-accent: #c45c26;
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
 }
 
 html {
@@ -20,9 +22,15 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-navy);
-  color: #fff;
+  color: var(--color-ink);
   font-family: var(--font-sans);
+  background-color: var(--color-canvas);
+  background-image:
+    radial-gradient(ellipse at 12% 8%, rgba(122, 148, 95, 0.18) 0%, transparent 42%),
+    radial-gradient(ellipse at 88% 18%, rgba(196, 92, 38, 0.08) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 100%, rgba(62, 82, 52, 0.1) 0%, transparent 45%),
+    linear-gradient(180deg, #f4f7f1 0%, #e8eee3 100%);
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -32,51 +40,84 @@ body {
 }
 
 .wa-glow {
-  box-shadow: 0 0 18px rgba(37, 211, 102, 0.45), 0 0 40px rgba(37, 211, 102, 0.2);
+  box-shadow: 0 8px 24px rgba(31, 173, 87, 0.28);
 }
 
 .wa-glow:hover {
-  box-shadow: 0 0 22px rgba(37, 211, 102, 0.55), 0 0 48px rgba(37, 211, 102, 0.28);
+  box-shadow: 0 10px 28px rgba(31, 173, 87, 0.38);
 }
 
-.text-stroke-gold {
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--color-gold);
-  text-stroke: 1.5px var(--color-gold);
+.section-alt {
+  background: linear-gradient(180deg, rgba(247, 249, 244, 0.7) 0%, rgba(238, 242, 234, 0.95) 100%);
 }
 
-.marble-bg {
-  background-color: #0a1628;
-  background-image:
-    radial-gradient(ellipse at 30% 20%, rgba(80, 110, 160, 0.35) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 80%, rgba(40, 70, 120, 0.4) 0%, transparent 45%),
-    radial-gradient(ellipse at 50% 50%, rgba(20, 40, 80, 0.5) 0%, transparent 70%),
-    linear-gradient(135deg, #0d1a32 0%, #152848 35%, #0a1528 70%, #1a2d4a 100%);
+.hero-wash {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(122, 148, 95, 0.22) 0%, transparent 55%),
+    linear-gradient(180deg, #e6ede0 0%, transparent 70%);
+}
+
+.promo-panel {
+  background:
+    linear-gradient(145deg, rgba(62, 82, 52, 0.92) 0%, rgba(31, 42, 28, 0.95) 100%),
+    radial-gradient(circle at 30% 20%, rgba(122, 148, 95, 0.35), transparent 50%);
   position: relative;
   overflow: hidden;
 }
 
-.marble-bg::before {
+.promo-panel::after {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.04) 45%, transparent 50%),
-    linear-gradient(160deg, transparent 30%, rgba(180, 200, 230, 0.06) 55%, transparent 70%),
-    linear-gradient(40deg, transparent 20%, rgba(255, 255, 255, 0.03) 60%, transparent 80%);
+    repeating-linear-gradient(
+      -18deg,
+      transparent,
+      transparent 12px,
+      rgba(255, 255, 255, 0.015) 12px,
+      rgba(255, 255, 255, 0.015) 13px
+    );
   pointer-events: none;
 }
 
-.gradient-gold {
-  background: linear-gradient(180deg, #ffe566 0%, #ffb020 45%, #e87800 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.grain {
+  position: relative;
 }
 
-.gradient-trusted {
-  background: linear-gradient(180deg, #ffffff 0%, #ffb84d 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.float-soft {
+  animation: float-soft 5s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fade-up 0.7s ease-out both;
 }

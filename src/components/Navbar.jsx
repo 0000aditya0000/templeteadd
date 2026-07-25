@@ -13,7 +13,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-navy/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-line/80 bg-surface/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-10">
         <Logo />
 
@@ -22,7 +22,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[13px] font-medium text-white/85 transition-colors hover:text-white"
+              className="text-[13px] font-medium text-ink-soft transition-colors hover:text-olive-deep"
             >
               {link.label}
             </a>
@@ -35,7 +35,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="flex h-9 w-9 items-center justify-center rounded-md text-white md:hidden"
+          className="flex h-9 w-9 items-center justify-center rounded-md text-ink md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -50,13 +50,13 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-white/5 px-6 py-4 md:hidden">
+        <div className="border-t border-line px-6 py-4 md:hidden">
           <nav className="flex flex-col gap-3">
             {LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-white/85"
+                className="text-sm text-ink-soft"
                 onClick={() => setOpen(false)}
               >
                 {link.label}

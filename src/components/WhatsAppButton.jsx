@@ -1,4 +1,5 @@
-const WA_LINK = "https://wa.me/919876543210";
+const WA_LINK =
+  "https://wa.me/+15554370213?text=" + encodeURIComponent("Hi i want the ID");
 
 export function WhatsAppIcon({ className = "w-4 h-4" }) {
   return (
@@ -29,7 +30,7 @@ export default function WhatsAppButton({
       href={WA_LINK}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center rounded-full bg-wa font-medium text-white transition-all hover:brightness-110 wa-glow ${sizes[size]} ${className}`}
+      className={`inline-flex items-center justify-center rounded-full bg-wa font-medium text-white transition-all hover:brightness-105 wa-glow ${sizes[size]} ${className}`}
     >
       <WhatsAppIcon className={size === "sm" ? "w-3.5 h-3.5" : "w-4 h-4"} />
       {label}

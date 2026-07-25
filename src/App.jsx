@@ -8,7 +8,7 @@ import Visit from "./components/Visit";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-navy text-white">
+    <div className="min-h-screen text-ink">
       <Navbar />
       <main>
         <PromoHero />

@@ -1,46 +1,36 @@
-export default function Logo({ className = "" }) {
+export default function Logo({ className = "", tone = "dark" }) {
+  const isLight = tone === "light";
+  const mark = isLight ? "#c5d4b8" : "#5a6f4a";
+  const primary = isLight ? "#f4f7f1" : "#1f2a1c";
+  const accent = isLight ? "#c5d4b8" : "#5a6f4a";
+
   return (
     <a href="#top" className={`inline-flex items-center gap-2.5 ${className}`}>
       <svg
-        width="20"
+        width="22"
         height="22"
-        viewBox="0 0 20 22"
+        viewBox="0 0 22 22"
         fill="none"
         aria-hidden="true"
         className="shrink-0"
       >
-        {/* Trident / trishula */}
+        <circle cx="11" cy="11" r="10" stroke={mark} strokeWidth="1.4" />
         <path
-          d="M10 1.5C10 1.5 10.4 5.5 10.4 8.2C12.8 6.2 15.8 5.2 17.5 5.5C15.2 7.2 12.2 9.5 10.4 12"
-          stroke="#c9a14a"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          fill="none"
+          d="M11 5.5c1.8 1.4 2.8 3.2 2.8 5.2 0 2.2-1.3 3.8-2.8 5.3-1.5-1.5-2.8-3.1-2.8-5.3 0-2 1-3.8 2.8-5.2z"
+          fill={mark}
         />
         <path
-          d="M10 1.5C10 1.5 9.6 5.5 9.6 8.2C7.2 6.2 4.2 5.2 2.5 5.5C4.8 7.2 7.8 9.5 9.6 12"
-          stroke="#c9a14a"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          fill="none"
-        />
-        <path
-          d="M10 1.5V18.5"
-          stroke="#c9a14a"
-          strokeWidth="1.6"
+          d="M8 12.5c1 .8 2 1.2 3 1.2s2-.4 3-1.2"
+          stroke={isLight ? "#3e5234" : "#eef2ea"}
+          strokeWidth="1.2"
           strokeLinecap="round"
         />
-        <path
-          d="M6.5 20.5H13.5"
-          stroke="#c9a14a"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        <circle cx="10" cy="12.5" r="1.2" fill="#c9a14a" />
       </svg>
-      <span className="text-[15px] font-bold tracking-[0.08em] uppercase">
-        <span className="text-white">S.K</span>{" "}
-        <span className="text-gold">GROUP</span>
+      <span
+        className="text-[15px] font-semibold tracking-[0.12em] uppercase"
+        style={{ color: primary }}
+      >
+        Hel<span style={{ color: accent }}>ia</span>
       </span>
     </a>
   );
